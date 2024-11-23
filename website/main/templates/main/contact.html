@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Please fill out the form below, and we will get in touch with you via WhatsApp.</p>
+
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="cta">Send Message via WhatsApp</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        // Calling preventDefault() during any stage of event flow cancels the event
+        event.preventDefault();
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Prepare the WhatsApp URL with a pre-filled message
+        var whatsappUrl = 'https://api.whatsapp.com/send?phone=+6282281123352&text=' +
+            encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nMessage: " + message);
+
+        // Redirect to WhatsApp with the message
+        window.open(whatsappUrl, '_blank');
+    });
+</script>
+{% endblock %}

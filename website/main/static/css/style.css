@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* ini di luar konten */
+    padding: 0; /* padding itu di dalam */
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*11 No 2024*/
+.container h1{
+    padding-left: 50px;
+}
+header h1 {
+    margin: 0;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+header .cta {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 50px;
+    text-decoration: none;
+    border-radius: 5px; /* pinggiran supaya tidak siku-siku */
+}
+.hero {
+    /*background: url('main/static/images/hero.png') no-repeat center center/cover;*/
+    background: url('../images/cambridge.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    height:400px;
+}
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services, .testimonials {
+    padding: 50px 0;
+}
+.services .container, .testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service, .testimonial {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+footer nav ul li {
+    margin-left: 20px;
+}
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+footer .contact-info {
+    text-align: left;
+}
+footer .contact-info p {
+    margin: 5px 0;
+}

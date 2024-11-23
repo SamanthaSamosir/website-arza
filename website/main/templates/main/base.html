@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AirEnglishCourse - Kursus Bahasa Inggris No. 1 di Indonesia{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AirEnglishCourse</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Program Kami</a></li>
+                    <li><a href="{% url 'about' %}">Bebas Biaya</a></li>
+                    <li><a href="{% url 'services' %}">Metode</a></li>
+                    <li><a href="{% url 'testimonials' %}">Testimoni</a></li>
+                    <li><a href="{% url 'blog' %}">Lokasi</a></li>
+                    <li><a href="{% url 'contact' %}">Promo</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta">Hubungi Kami</a>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <p>Address: 123 Main St, City, Country</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: contact@example.com</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
